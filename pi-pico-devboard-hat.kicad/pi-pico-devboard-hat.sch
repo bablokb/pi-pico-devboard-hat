@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "pi-pico-devboard-hat"
-Date "2021-03-11"
-Rev "1"
+Date "2021-03-18"
+Rev "2"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pi-pico-devboard-hat"
 Comment2 ""
@@ -387,39 +387,6 @@ F 3 "" H 7600 4350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x20_Male J2
-U 1 1 604A53BA
-P 6300 4300
-F 0 "J2" H 6400 5500 50  0000 C CNN
-F 1 "Conn_Pico_1" H 6400 5350 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 6300 4300 50  0001 C CNN
-F 3 "~" H 6300 4300 50  0001 C CNN
-	1    6300 4300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x20_Male J4
-U 1 1 604AF8E6
-P 8900 4400
-F 0 "J4" H 9050 3050 50  0000 C CNN
-F 1 "Conn_Pico_2" H 9050 3200 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 8900 4400 50  0001 C CNN
-F 3 "~" H 8900 4400 50  0001 C CNN
-	1    8900 4400
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x03_Male J3
-U 1 1 604B1D35
-P 7600 6250
-F 0 "J3" V 7754 6062 50  0000 R CNN
-F 1 "Conn_SWD" V 7663 6062 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 7600 6250 50  0001 C CNN
-F 3 "~" H 7600 6250 50  0001 C CNN
-	1    7600 6250
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Switch:SW_Push SW1
 U 1 1 604B3ACB
 P 9400 4400
@@ -431,29 +398,13 @@ F 3 "~" H 9400 4600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8300 3500 8700 3500
-Wire Wire Line
-	8300 3600 8700 3600
-Wire Wire Line
-	8300 3700 8700 3700
-Wire Wire Line
-	8300 3800 8700 3800
-Wire Wire Line
-	8300 3900 8700 3900
-Wire Wire Line
 	8300 4000 8700 4000
-Wire Wire Line
-	8300 4100 8700 4100
 Wire Wire Line
 	8300 4200 8700 4200
 Wire Wire Line
 	8300 4300 8700 4300
 Wire Wire Line
-	8300 4400 8700 4400
-Wire Wire Line
 	8300 4500 8700 4500
-Wire Wire Line
-	8300 4600 8700 4600
 Wire Wire Line
 	8300 4700 8700 4700
 Wire Wire Line
@@ -463,17 +414,9 @@ Wire Wire Line
 Wire Wire Line
 	8300 5000 8700 5000
 Wire Wire Line
-	8300 5100 8700 5100
-Wire Wire Line
 	8300 5200 8700 5200
 Wire Wire Line
 	8300 5300 8700 5300
-Wire Wire Line
-	6500 3400 6850 3400
-Wire Wire Line
-	6500 3500 6750 3500
-Wire Wire Line
-	6500 3600 6900 3600
 Wire Wire Line
 	6500 3700 6900 3700
 Wire Wire Line
@@ -483,8 +426,6 @@ Wire Wire Line
 Wire Wire Line
 	6500 4000 6900 4000
 Wire Wire Line
-	6500 4100 6900 4100
-Wire Wire Line
 	6500 4200 6900 4200
 Wire Wire Line
 	6500 4300 6900 4300
@@ -492,25 +433,6 @@ Wire Wire Line
 	6500 4400 6900 4400
 Wire Wire Line
 	6500 4500 6900 4500
-Wire Wire Line
-	6500 4600 6900 4600
-Wire Wire Line
-	6500 4700 6900 4700
-Wire Wire Line
-	6500 4800 6900 4800
-Wire Wire Line
-	6500 4900 6900 4900
-Wire Wire Line
-	6500 5000 6900 5000
-Wire Wire Line
-	6500 5100 6900 5100
-Wire Wire Line
-	6500 5200 6900 5200
-Wire Wire Line
-	6500 5300 6900 5300
-Wire Wire Line
-	8700 4400 9200 4400
-Connection ~ 8700 4400
 $Comp
 L power:GND #PWR07
 U 1 1 604EE819
@@ -525,22 +447,13 @@ $EndComp
 Wire Wire Line
 	9600 4400 9800 4400
 Wire Wire Line
-	8700 3600 9800 3600
-Wire Wire Line
 	9800 3600 9800 4400
-Connection ~ 8700 3600
 Wire Wire Line
 	9800 4600 9800 4400
-Connection ~ 8700 4600
 Connection ~ 9800 4400
 Connection ~ 9800 4600
 Wire Wire Line
-	8700 4600 9800 4600
-Wire Wire Line
 	9800 4600 9800 5100
-Wire Wire Line
-	9800 5100 8700 5100
-Connection ~ 8700 5100
 $Comp
 L power:GND #PWR05
 U 1 1 6050FECC
@@ -553,21 +466,12 @@ F 3 "" H 5800 4100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6500 3600 5950 3600
-Wire Wire Line
 	5950 3600 5950 4100
-Connection ~ 6500 3600
 Connection ~ 5950 4100
 Wire Wire Line
 	5950 4100 5800 4100
 Wire Wire Line
 	5950 4100 5950 4600
-Wire Wire Line
-	5950 4600 6500 4600
-Connection ~ 6500 4600
-Wire Wire Line
-	6500 5100 5950 5100
-Connection ~ 6500 5100
 Connection ~ 5950 4600
 $Comp
 L power:+5V #PWR06
@@ -591,7 +495,6 @@ F 3 "~" H 9800 2950 50  0001 C CNN
 	1    9800 2950
 	0    -1   -1   0   
 $EndComp
-Connection ~ 8700 3500
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 605568F4
@@ -612,9 +515,6 @@ Connection ~ 7600 5650
 Wire Wire Line
 	7600 5650 7600 5500
 Connection ~ 9800 5100
-Wire Wire Line
-	6500 4100 5950 4100
-Connection ~ 6500 4100
 NoConn ~ 2400 2400
 NoConn ~ 2900 2400
 NoConn ~ 2900 2800
@@ -654,8 +554,6 @@ F 3 "~" H 2200 950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Connection ~ 2200 950 
-Wire Wire Line
-	8300 3400 8700 3400
 Text Label 10300 3400 2    50   ~ 0
 VBUS
 $Comp
@@ -671,8 +569,6 @@ F 3 "~" H 10500 3400 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10300 3400 10500 3400
-Text Label 8350 3400 0    50   ~ 0
-VBUS
 Text Label 10300 3700 2    50   ~ 0
 3V3_EN
 $Comp
@@ -743,8 +639,6 @@ Text Label 8350 4100 0    50   ~ 0
 AGND
 Wire Wire Line
 	9800 3100 9800 3500
-Wire Wire Line
-	8700 3500 9800 3500
 Text Label 10300 3500 2    50   ~ 0
 VSYS
 $Comp
@@ -764,26 +658,88 @@ Text Label 8350 3500 0    50   ~ 0
 VSYS
 Text Label 7700 5900 0    50   ~ 0
 GPIO24(GEN5)
-Wire Wire Line
-	7700 5500 7700 6050
-Wire Wire Line
-	7600 5650 7600 6050
 Text Label 7500 5900 2    50   ~ 0
 GPIO25(GEN6)
-Wire Wire Line
-	7500 5500 7500 6050
 Text Label 6850 3100 0    50   ~ 0
 GPIO15(RXD0)
 Text Label 6750 3000 0    50   ~ 0
 GPIO14(TXD0)
 Wire Wire Line
 	6850 3100 6850 3400
-Connection ~ 6850 3400
 Wire Wire Line
 	6850 3400 6900 3400
 Wire Wire Line
 	6750 3000 6750 3500
-Connection ~ 6750 3500
 Wire Wire Line
 	6750 3500 6900 3500
+Wire Wire Line
+	5950 4600 6900 4600
+Wire Wire Line
+	5950 5100 6900 5100
+Wire Wire Line
+	5950 3600 6900 3600
+Wire Wire Line
+	5950 4100 6900 4100
+Wire Wire Line
+	6500 4700 6900 4700
+Wire Wire Line
+	6500 4800 6900 4800
+Wire Wire Line
+	6500 4900 6900 4900
+Wire Wire Line
+	6500 5000 6900 5000
+Wire Wire Line
+	6500 5200 6900 5200
+Wire Wire Line
+	6500 5300 6900 5300
+Wire Wire Line
+	8300 4400 9200 4400
+Wire Wire Line
+	8300 3600 9800 3600
+Wire Wire Line
+	8300 3500 9800 3500
+Wire Wire Line
+	8300 5100 9800 5100
+Wire Wire Line
+	8300 4600 9800 4600
+Text Label 8350 3400 0    50   ~ 0
+VBUS
+Wire Wire Line
+	8300 3400 8350 3400
+Wire Wire Line
+	8300 3700 8350 3700
+Wire Wire Line
+	8300 3800 8350 3800
+Wire Wire Line
+	8300 3900 8350 3900
+Wire Wire Line
+	8300 4100 8350 4100
+NoConn ~ 6500 3700
+NoConn ~ 6500 3800
+NoConn ~ 6500 3900
+NoConn ~ 6500 4000
+NoConn ~ 6500 4200
+NoConn ~ 6500 4300
+NoConn ~ 6500 4400
+NoConn ~ 6500 4500
+NoConn ~ 6500 4700
+NoConn ~ 6500 4800
+NoConn ~ 6500 4900
+NoConn ~ 6500 5000
+NoConn ~ 6500 5200
+NoConn ~ 6500 5300
+NoConn ~ 8700 4000
+NoConn ~ 8700 4200
+NoConn ~ 8700 4300
+NoConn ~ 8700 4500
+NoConn ~ 8700 4700
+NoConn ~ 8700 4800
+NoConn ~ 8700 4900
+NoConn ~ 8700 5000
+NoConn ~ 8700 5200
+NoConn ~ 8700 5300
+Wire Wire Line
+	7700 5500 7700 5900
+Wire Wire Line
+	7500 5500 7500 5900
 $EndSCHEMATC
