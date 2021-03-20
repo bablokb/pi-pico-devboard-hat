@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "pi-pico-devboard-hat"
 Date "2021-03-18"
-Rev "2"
+Rev "3"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pi-pico-devboard-hat"
 Comment2 ""
@@ -714,8 +714,6 @@ Wire Wire Line
 	8300 3900 8350 3900
 Wire Wire Line
 	8300 4100 8350 4100
-NoConn ~ 6500 3700
-NoConn ~ 6500 3800
 NoConn ~ 6500 3900
 NoConn ~ 6500 4000
 NoConn ~ 6500 4200
@@ -742,4 +740,105 @@ Wire Wire Line
 	7700 5500 7700 5900
 Wire Wire Line
 	7500 5500 7500 5900
+$Comp
+L Connector:Conn_01x04_Male J2
+U 1 1 6061A256
+P 4400 3950
+F 0 "J2" H 4500 4300 50  0000 C CNN
+F 1 "I2C" H 4500 4200 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 4400 3950 50  0001 C CNN
+F 3 "~" H 4400 3950 50  0001 C CNN
+	1    4400 3950
+	1    0    0    -1  
+$EndComp
+Text Label 4600 3850 0    50   ~ 0
+SDA_GP2
+Text Label 6500 3700 2    50   ~ 0
+SDA_GP2
+Text Label 4600 3950 0    50   ~ 0
+SCL_GP3
+Text Label 6500 3800 2    50   ~ 0
+SCL_GP3
+Text Label 4600 4050 0    50   ~ 0
+3V3
+$Comp
+L power:GND #PWR0101
+U 1 1 6061BF4A
+P 4650 4150
+F 0 "#PWR0101" H 4650 3900 50  0001 C CNN
+F 1 "GND" V 4655 4022 50  0000 R CNN
+F 2 "" H 4650 4150 50  0001 C CNN
+F 3 "" H 4650 4150 50  0001 C CNN
+	1    4650 4150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4600 4150 4650 4150
+$Comp
+L Device:R R2
+U 1 1 6062584D
+P 3850 4200
+F 0 "R2" H 3780 4154 50  0000 R CNN
+F 1 "4K7" H 3780 4245 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3780 4200 50  0001 C CNN
+F 3 "~" H 3850 4200 50  0001 C CNN
+	1    3850 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 60626297
+P 3500 4200
+F 0 "R1" H 3430 4154 50  0000 R CNN
+F 1 "4K7" H 3430 4245 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3430 4200 50  0001 C CNN
+F 3 "~" H 3500 4200 50  0001 C CNN
+	1    3500 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 60626EA3
+P 3600 3550
+F 0 "J3" V 3400 3450 50  0000 L CNN
+F 1 "SDA_UP" V 3500 3300 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3600 3550 50  0001 C CNN
+F 3 "~" H 3600 3550 50  0001 C CNN
+	1    3600 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J4
+U 1 1 606291D7
+P 3950 3550
+F 0 "J4" V 3750 3450 50  0000 L CNN
+F 1 "SCL_UP" V 3850 3400 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3950 3550 50  0001 C CNN
+F 3 "~" H 3950 3550 50  0001 C CNN
+	1    3950 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4600 3850 3950 3850
+Wire Wire Line
+	3950 3850 3950 3750
+Wire Wire Line
+	4600 3950 3600 3950
+Wire Wire Line
+	3600 3950 3600 3750
+Wire Wire Line
+	3500 3750 3500 4050
+Wire Wire Line
+	3850 3750 3850 4050
+Wire Wire Line
+	4600 4050 4250 4050
+Wire Wire Line
+	4250 4050 4250 4350
+Wire Wire Line
+	4250 4350 3850 4350
+Wire Wire Line
+	3850 4300 3850 4350
+Wire Wire Line
+	3850 4350 3500 4350
+Connection ~ 3850 4350
 $EndSCHEMATC

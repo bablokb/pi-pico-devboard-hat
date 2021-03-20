@@ -1,4 +1,4 @@
-update=Di 16 Mär 2021 11:33:32 CET
+update=Sa 20 Mär 2021 15:16:41 CET
 version=1
 last_client=kicad
 [cvpcb]
@@ -251,6 +251,17 @@ dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/1]
+Name=3V3
+Clearance=0.2
+TrackWidth=0.3
+ViaDiameter=0.9
+ViaDrill=0.6
+uViaDiameter=0.5
+uViaDrill=0.1
+dPairWidth=0.2
+dPairGap=0.25
+dPairViaGap=0.25
+[pcbnew/Netclasses/2]
 Name=Power
 Clearance=0.2
 TrackWidth=0.5
