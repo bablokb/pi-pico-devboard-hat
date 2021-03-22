@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "pi-pico-devboard-hat"
-Date "2021-03-18"
-Rev "3"
+Date "2021-03-22"
+Rev "4"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pi-pico-devboard-hat"
 Comment2 ""
@@ -457,22 +457,22 @@ Wire Wire Line
 $Comp
 L power:GND #PWR05
 U 1 1 6050FECC
-P 5800 4100
-F 0 "#PWR05" H 5800 3850 50  0001 C CNN
-F 1 "GND" V 5805 3972 50  0000 R CNN
-F 2 "" H 5800 4100 50  0001 C CNN
-F 3 "" H 5800 4100 50  0001 C CNN
-	1    5800 4100
+P 5650 4100
+F 0 "#PWR05" H 5650 3850 50  0001 C CNN
+F 1 "GND" V 5655 3972 50  0000 R CNN
+F 2 "" H 5650 4100 50  0001 C CNN
+F 3 "" H 5650 4100 50  0001 C CNN
+	1    5650 4100
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5950 3600 5950 4100
-Connection ~ 5950 4100
+	5800 3600 5800 4100
+Connection ~ 5800 4100
 Wire Wire Line
-	5950 4100 5800 4100
+	5800 4100 5650 4100
 Wire Wire Line
-	5950 4100 5950 4600
-Connection ~ 5950 4600
+	5800 4100 5800 4600
+Connection ~ 5800 4600
 $Comp
 L power:+5V #PWR06
 U 1 1 6052A522
@@ -511,7 +511,6 @@ Wire Wire Line
 	7600 5650 9800 5650
 Wire Wire Line
 	9800 5650 9800 5100
-Connection ~ 7600 5650
 Wire Wire Line
 	7600 5650 7600 5500
 Connection ~ 9800 5100
@@ -522,12 +521,10 @@ NoConn ~ 2400 2900
 Wire Wire Line
 	9800 4600 10050 4600
 Wire Wire Line
-	7600 5650 5950 5650
+	5800 4600 5800 5100
+Connection ~ 5800 5100
 Wire Wire Line
-	5950 4600 5950 5100
-Connection ~ 5950 5100
-Wire Wire Line
-	5950 5100 5950 5650
+	5800 5100 5800 5650
 $Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 60585862
@@ -673,14 +670,6 @@ Wire Wire Line
 Wire Wire Line
 	6750 3500 6900 3500
 Wire Wire Line
-	5950 4600 6900 4600
-Wire Wire Line
-	5950 5100 6900 5100
-Wire Wire Line
-	5950 3600 6900 3600
-Wire Wire Line
-	5950 4100 6900 4100
-Wire Wire Line
 	6500 4700 6900 4700
 Wire Wire Line
 	6500 4800 6900 4800
@@ -722,10 +711,7 @@ NoConn ~ 6500 4400
 NoConn ~ 6500 4500
 NoConn ~ 6500 4700
 NoConn ~ 6500 4800
-NoConn ~ 6500 4900
 NoConn ~ 6500 5000
-NoConn ~ 6500 5200
-NoConn ~ 6500 5300
 NoConn ~ 8700 4000
 NoConn ~ 8700 4200
 NoConn ~ 8700 4300
@@ -743,102 +729,185 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x04_Male J2
 U 1 1 6061A256
-P 4400 3950
-F 0 "J2" H 4500 4300 50  0000 C CNN
-F 1 "I2C" H 4500 4200 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 4400 3950 50  0001 C CNN
-F 3 "~" H 4400 3950 50  0001 C CNN
-	1    4400 3950
+P 1900 4300
+F 0 "J2" H 2000 4650 50  0000 C CNN
+F 1 "I2C" H 2000 4550 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1900 4300 50  0001 C CNN
+F 3 "~" H 1900 4300 50  0001 C CNN
+	1    1900 4300
 	1    0    0    -1  
 $EndComp
-Text Label 4600 3850 0    50   ~ 0
+Text Label 2100 4200 0    50   ~ 0
 SDA_GP2
 Text Label 6500 3700 2    50   ~ 0
 SDA_GP2
-Text Label 4600 3950 0    50   ~ 0
+Text Label 2100 4300 0    50   ~ 0
 SCL_GP3
 Text Label 6500 3800 2    50   ~ 0
 SCL_GP3
-Text Label 4600 4050 0    50   ~ 0
+Text Label 2100 4400 0    50   ~ 0
 3V3
 $Comp
 L power:GND #PWR0101
 U 1 1 6061BF4A
-P 4650 4150
-F 0 "#PWR0101" H 4650 3900 50  0001 C CNN
-F 1 "GND" V 4655 4022 50  0000 R CNN
-F 2 "" H 4650 4150 50  0001 C CNN
-F 3 "" H 4650 4150 50  0001 C CNN
-	1    4650 4150
+P 2150 4500
+F 0 "#PWR0101" H 2150 4250 50  0001 C CNN
+F 1 "GND" V 2155 4372 50  0000 R CNN
+F 2 "" H 2150 4500 50  0001 C CNN
+F 3 "" H 2150 4500 50  0001 C CNN
+	1    2150 4500
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	4600 4150 4650 4150
+	2100 4500 2150 4500
 $Comp
 L Device:R R2
 U 1 1 6062584D
-P 3850 4200
-F 0 "R2" H 3780 4154 50  0000 R CNN
-F 1 "4K7" H 3780 4245 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3780 4200 50  0001 C CNN
-F 3 "~" H 3850 4200 50  0001 C CNN
-	1    3850 4200
+P 1350 4550
+F 0 "R2" H 1280 4504 50  0000 R CNN
+F 1 "4K7" H 1280 4595 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1280 4550 50  0001 C CNN
+F 3 "~" H 1350 4550 50  0001 C CNN
+	1    1350 4550
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R1
 U 1 1 60626297
-P 3500 4200
-F 0 "R1" H 3430 4154 50  0000 R CNN
-F 1 "4K7" H 3430 4245 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3430 4200 50  0001 C CNN
-F 3 "~" H 3500 4200 50  0001 C CNN
-	1    3500 4200
+P 1000 4550
+F 0 "R1" H 930 4504 50  0000 R CNN
+F 1 "4K7" H 930 4595 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 930 4550 50  0001 C CNN
+F 3 "~" H 1000 4550 50  0001 C CNN
+	1    1000 4550
 	-1   0    0    1   
 $EndComp
 $Comp
 L Connector:Conn_01x02_Male J3
 U 1 1 60626EA3
-P 3600 3550
-F 0 "J3" V 3400 3450 50  0000 L CNN
-F 1 "SDA_UP" V 3500 3300 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3600 3550 50  0001 C CNN
-F 3 "~" H 3600 3550 50  0001 C CNN
-	1    3600 3550
+P 1100 3900
+F 0 "J3" V 900 3800 50  0000 L CNN
+F 1 "SDA_UP" V 1000 3650 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1100 3900 50  0001 C CNN
+F 3 "~" H 1100 3900 50  0001 C CNN
+	1    1100 3900
 	0    1    1    0   
 $EndComp
 $Comp
 L Connector:Conn_01x02_Male J4
 U 1 1 606291D7
-P 3950 3550
-F 0 "J4" V 3750 3450 50  0000 L CNN
-F 1 "SCL_UP" V 3850 3400 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3950 3550 50  0001 C CNN
-F 3 "~" H 3950 3550 50  0001 C CNN
-	1    3950 3550
+P 1450 3900
+F 0 "J4" V 1250 3800 50  0000 L CNN
+F 1 "SCL_UP" V 1350 3750 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1450 3900 50  0001 C CNN
+F 3 "~" H 1450 3900 50  0001 C CNN
+	1    1450 3900
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4600 3850 3950 3850
+	2100 4200 1450 4200
 Wire Wire Line
-	3950 3850 3950 3750
+	1450 4200 1450 4100
 Wire Wire Line
-	4600 3950 3600 3950
+	2100 4300 1100 4300
 Wire Wire Line
-	3600 3950 3600 3750
+	1100 4300 1100 4100
 Wire Wire Line
-	3500 3750 3500 4050
+	1000 4100 1000 4400
 Wire Wire Line
-	3850 3750 3850 4050
+	1350 4100 1350 4400
 Wire Wire Line
-	4600 4050 4250 4050
+	2100 4400 1750 4400
 Wire Wire Line
-	4250 4050 4250 4350
+	1750 4400 1750 4700
 Wire Wire Line
-	4250 4350 3850 4350
+	1750 4700 1350 4700
 Wire Wire Line
-	3850 4300 3850 4350
+	1350 4650 1350 4700
 Wire Wire Line
-	3850 4350 3500 4350
-Connection ~ 3850 4350
+	1350 4700 1000 4700
+Connection ~ 1350 4700
+$Comp
+L Connector:Conn_01x07_Male J5
+U 1 1 605903A9
+P 950 5650
+F 0 "J5" H 1050 6200 50  0000 C CNN
+F 1 "Conn_SPI" H 1050 6100 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 950 5650 50  0001 C CNN
+F 3 "~" H 950 5650 50  0001 C CNN
+	1    950  5650
+	1    0    0    -1  
+$EndComp
+Text Label 1500 5350 0    50   ~ 0
+3V3
+$Comp
+L power:GND #PWR08
+U 1 1 60592C62
+P 1800 5350
+F 0 "#PWR08" H 1800 5100 50  0001 C CNN
+F 1 "GND" V 1805 5222 50  0000 R CNN
+F 2 "" H 1800 5350 50  0001 C CNN
+F 3 "" H 1800 5350 50  0001 C CNN
+	1    1800 5350
+	-1   0    0    1   
+$EndComp
+Text Label 1500 5550 0    50   ~ 0
+SPI1TX_GP15
+Text Label 1500 5650 0    50   ~ 0
+SPI1_CLK_GP14
+Text Label 1500 5750 0    50   ~ 0
+SPI_RX_GP12
+Wire Wire Line
+	1150 5350 1500 5350
+Wire Wire Line
+	1800 5450 1800 5350
+Wire Wire Line
+	1150 5450 1800 5450
+Wire Wire Line
+	1150 5550 1500 5550
+Wire Wire Line
+	1150 5650 1500 5650
+Wire Wire Line
+	1150 5750 1500 5750
+Wire Wire Line
+	1150 5950 1150 5850
+Text Notes 1250 5900 0    50   ~ 0
+SPI1_CS
+Text Label 6500 5300 2    50   ~ 0
+SPI1TX_GP15
+Text Label 6500 5200 2    50   ~ 0
+SPI1_CLK_GP14
+Text Label 6500 4900 2    50   ~ 0
+SPI_RX_GP12
+Wire Wire Line
+	5800 5100 6900 5100
+Wire Wire Line
+	5800 4600 6900 4600
+Wire Wire Line
+	5800 4100 6900 4100
+Wire Wire Line
+	5800 3600 6900 3600
+Wire Wire Line
+	5800 5650 7600 5650
+Connection ~ 7600 5650
+Wire Notes Line
+	750  3550 750  4900
+Wire Notes Line
+	750  4900 2600 4900
+Wire Notes Line
+	2600 4900 2600 3550
+Wire Notes Line
+	2600 3550 750  3550
+Wire Notes Line
+	750  6100 750  5000
+Text Notes 2000 4850 0    50   ~ 0
+I2C-Connector
+Text Notes 1950 6050 0    50   ~ 0
+SPI-Connector
+Wire Notes Line
+	2600 5000 2600 6100
+Wire Notes Line
+	750  5000 2600 5000
+Wire Notes Line
+	750  6100 2600 6100
 $EndSCHEMATC
