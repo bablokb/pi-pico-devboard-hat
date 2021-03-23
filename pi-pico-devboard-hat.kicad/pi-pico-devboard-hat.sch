@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "pi-pico-devboard-hat"
 Date "2021-03-23"
-Rev "5"
+Rev "6"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pi-pico-devboard-hat"
 Comment2 ""
@@ -952,4 +952,86 @@ Wire Notes Line
 	2750 6100 2750 5000
 Text Notes 3000 6050 0    50   ~ 0
 External-Connector
+$Comp
+L Switch:SW_Push SW2
+U 1 1 605E1ED2
+P 3450 6700
+F 0 "SW2" H 3450 6985 50  0000 C CNN
+F 1 "BTN1" H 3450 6894 50  0000 C CNN
+F 2 "user:SW_PUSH_SLIM_1x4" H 3450 6900 50  0001 C CNN
+F 3 "~" H 3450 6900 50  0001 C CNN
+	1    3450 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW3
+U 1 1 605EB865
+P 3450 7150
+F 0 "SW3" H 3450 7435 50  0000 C CNN
+F 1 "BTN2" H 3450 7344 50  0000 C CNN
+F 2 "user:SW_PUSH_SLIM_1x4" H 3450 7350 50  0001 C CNN
+F 3 "~" H 3450 7350 50  0001 C CNN
+	1    3450 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW4
+U 1 1 605EBC25
+P 3450 7550
+F 0 "SW4" H 3450 7835 50  0000 C CNN
+F 1 "BTN3" H 3450 7744 50  0000 C CNN
+F 2 "user:SW_PUSH_SLIM_1x4" H 3450 7750 50  0001 C CNN
+F 3 "~" H 3450 7750 50  0001 C CNN
+	1    3450 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J7
+U 1 1 605EC64E
+P 2900 7150
+F 0 "J7" H 3000 7800 50  0000 C CNN
+F 1 "Conn_BTN" H 3000 7700 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2900 7150 50  0001 C CNN
+F 3 "~" H 2900 7150 50  0001 C CNN
+	1    2900 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 605ED18C
+P 3800 7150
+F 0 "#PWR09" H 3800 6900 50  0001 C CNN
+F 1 "GND" V 3805 7022 50  0000 R CNN
+F 2 "" H 3800 7150 50  0001 C CNN
+F 3 "" H 3800 7150 50  0001 C CNN
+	1    3800 7150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3650 6700 3650 7150
+Connection ~ 3650 7150
+Wire Wire Line
+	3650 7150 3650 7550
+Wire Wire Line
+	3100 7050 3100 6700
+Wire Wire Line
+	3100 7250 3100 7550
+Wire Wire Line
+	3100 6700 3250 6700
+Wire Wire Line
+	3100 7150 3250 7150
+Wire Wire Line
+	3100 7550 3250 7550
+Wire Wire Line
+	3650 7150 3800 7150
+Wire Notes Line
+	2750 6300 4150 6300
+Wire Notes Line
+	4150 6300 4150 7700
+Wire Notes Line
+	4150 7700 2750 7700
+Wire Notes Line
+	2750 7700 2750 6300
+Text Notes 3800 7650 0    50   ~ 0
+Buttons
 $EndSCHEMATC
