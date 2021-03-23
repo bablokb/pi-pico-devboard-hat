@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "pi-pico-devboard-hat"
 Date "2021-03-23"
-Rev "7"
+Rev "8"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pi-pico-devboard-hat"
 Comment2 ""
@@ -707,11 +707,9 @@ NoConn ~ 6500 3900
 NoConn ~ 6500 4000
 NoConn ~ 6500 4200
 NoConn ~ 6500 4300
-NoConn ~ 6500 4400
 NoConn ~ 6500 4500
 NoConn ~ 6500 4700
 NoConn ~ 6500 4800
-NoConn ~ 6500 5000
 NoConn ~ 8700 4000
 NoConn ~ 8700 4200
 NoConn ~ 8700 4300
@@ -828,14 +826,14 @@ Wire Wire Line
 	1350 4700 1000 4700
 Connection ~ 1350 4700
 $Comp
-L Connector:Conn_01x07_Male J5
+L Connector:Conn_01x06_Male J5
 U 1 1 605903A9
-P 950 5650
-F 0 "J5" H 1050 6200 50  0000 C CNN
-F 1 "Conn_SPI" H 1050 6100 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 950 5650 50  0001 C CNN
-F 3 "~" H 950 5650 50  0001 C CNN
-	1    950  5650
+P 950 5550
+F 0 "J5" H 1050 6000 50  0000 C CNN
+F 1 "Conn_SPI" H 1050 5900 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 950 5550 50  0001 C CNN
+F 3 "~" H 950 5550 50  0001 C CNN
+	1    950  5550
 	1    0    0    -1  
 $EndComp
 Text Label 1500 5350 0    50   ~ 0
@@ -869,10 +867,6 @@ Wire Wire Line
 	1150 5650 1500 5650
 Wire Wire Line
 	1150 5750 1500 5750
-Wire Wire Line
-	1150 5950 1150 5850
-Text Notes 1250 5900 0    50   ~ 0
-SPI1_CS
 Text Label 6500 5300 2    50   ~ 0
 SPI1TX_GP15
 Text Label 6500 5200 2    50   ~ 0
@@ -898,25 +892,19 @@ Wire Notes Line
 	2600 4900 2600 3550
 Wire Notes Line
 	2600 3550 750  3550
-Wire Notes Line
-	750  6100 750  5000
 Text Notes 2000 4850 0    50   ~ 0
 I2C-Connector
 Text Notes 1950 6050 0    50   ~ 0
 SPI-Connector
 Wire Notes Line
-	2600 5000 2600 6100
-Wire Notes Line
 	750  5000 2600 5000
-Wire Notes Line
-	750  6100 2600 6100
 $Comp
-L Connector:Conn_01x04_Male J6
+L Connector:Conn_01x03_Male J6
 U 1 1 605A6142
 P 2850 5450
 F 0 "J6" H 2950 5800 50  0000 C CNN
 F 1 "Conn_Ext" H 2950 5700 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2850 5450 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2850 5450 50  0001 C CNN
 F 3 "~" H 2850 5450 50  0001 C CNN
 	1    2850 5450
 	1    0    0    -1  
@@ -940,8 +928,6 @@ Wire Wire Line
 	3700 5450 3700 5350
 Wire Wire Line
 	3050 5450 3700 5450
-Wire Wire Line
-	3050 5650 3050 5550
 Wire Notes Line
 	2750 5000 3800 5000
 Wire Notes Line
@@ -1155,4 +1141,72 @@ Wire Notes Line
 	7800 2150 7800 750 
 Text Notes 9450 2100 0    50   ~ 0
 LEDs
+Text Label 6500 5000 2    50   ~ 0
+SPI_CS_GP13
+Text Label 1500 5850 0    50   ~ 0
+SPI_CS_GP13
+Wire Wire Line
+	1150 5850 1500 5850
+Wire Notes Line
+	2600 5000 2600 6100
+Wire Notes Line
+	2600 6100 750  6100
+Wire Notes Line
+	750  6100 750  5000
+Text Label 6500 4400 2    50   ~ 0
+GP8
+Text Label 3400 5550 0    50   ~ 0
+GP8
+Wire Wire Line
+	3050 5550 3400 5550
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J9
+U 1 1 608162C5
+P 3200 4000
+F 0 "J9" H 3250 4317 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 3250 4226 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 3200 4000 50  0001 C CNN
+F 3 "~" H 3200 4000 50  0001 C CNN
+	1    3200 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 60817D38
+P 3500 4450
+F 0 "#PWR011" H 3500 4200 50  0001 C CNN
+F 1 "GND" V 3505 4322 50  0000 R CNN
+F 2 "" H 3500 4450 50  0001 C CNN
+F 3 "" H 3500 4450 50  0001 C CNN
+	1    3500 4450
+	1    0    0    -1  
+$EndComp
+Text Label 3000 4500 3    50   ~ 0
+3V3
+Wire Wire Line
+	3000 4500 3000 4100
+Connection ~ 3000 4000
+Wire Wire Line
+	3000 4000 3000 3900
+Connection ~ 3000 4100
+Wire Wire Line
+	3000 4100 3000 4000
+Wire Wire Line
+	3500 4450 3500 4100
+Connection ~ 3500 4000
+Wire Wire Line
+	3500 4000 3500 3900
+Connection ~ 3500 4100
+Wire Wire Line
+	3500 4100 3500 4000
+Wire Notes Line
+	3800 4900 3800 3550
+Text Notes 3500 4850 0    50   ~ 0
+Power
+Wire Notes Line
+	2750 4900 2750 3550
+Wire Notes Line
+	2750 4900 3800 4900
+Wire Notes Line
+	2750 3550 3800 3550
 $EndSCHEMATC
