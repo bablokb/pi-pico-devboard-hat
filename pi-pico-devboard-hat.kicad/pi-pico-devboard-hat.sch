@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "pi-pico-devboard-hat"
-Date "2021-03-22"
-Rev "4"
+Date "2021-03-23"
+Rev "5"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pi-pico-devboard-hat"
 Comment2 ""
@@ -910,4 +910,46 @@ Wire Notes Line
 	750  5000 2600 5000
 Wire Notes Line
 	750  6100 2600 6100
+$Comp
+L Connector:Conn_01x04_Male J6
+U 1 1 605A6142
+P 2850 5450
+F 0 "J6" H 2950 5800 50  0000 C CNN
+F 1 "Conn_Ext" H 2950 5700 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2850 5450 50  0001 C CNN
+F 3 "~" H 2850 5450 50  0001 C CNN
+	1    2850 5450
+	1    0    0    -1  
+$EndComp
+Text Label 3400 5350 0    50   ~ 0
+3V3
+$Comp
+L power:GND #PWR0102
+U 1 1 605AA8EF
+P 3700 5350
+F 0 "#PWR0102" H 3700 5100 50  0001 C CNN
+F 1 "GND" V 3705 5222 50  0000 R CNN
+F 2 "" H 3700 5350 50  0001 C CNN
+F 3 "" H 3700 5350 50  0001 C CNN
+	1    3700 5350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3050 5350 3400 5350
+Wire Wire Line
+	3700 5450 3700 5350
+Wire Wire Line
+	3050 5450 3700 5450
+Wire Wire Line
+	3050 5650 3050 5550
+Wire Notes Line
+	2750 5000 3800 5000
+Wire Notes Line
+	3800 5000 3800 6100
+Wire Notes Line
+	3800 6100 2750 6100
+Wire Notes Line
+	2750 6100 2750 5000
+Text Notes 3000 6050 0    50   ~ 0
+External-Connector
 $EndSCHEMATC
