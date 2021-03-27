@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "pi-pico-devboard-hat"
 Date "2021-03-27"
-Rev "10"
+Rev "11"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pi-pico-devboard-hat"
 Comment2 ""
@@ -293,83 +293,17 @@ F 3 "~" H 4450 2200 50  0001 C CNN
 	1    4450 2200
 	1    0    0    1   
 $EndComp
-Wire Wire Line
-	4650 3300 5400 3300
-Wire Wire Line
-	4650 3200 5400 3200
-Text Label 5400 3300 2    50   ~ 0
-GPIO2(SDA1)
-Text Label 5400 3200 2    50   ~ 0
-GPIO3(SCL1)
-Wire Wire Line
-	4650 3100 5400 3100
-Wire Wire Line
-	4650 3000 5400 3000
-Wire Wire Line
-	4650 2900 5400 2900
-Wire Wire Line
-	4650 2800 5400 2800
-Wire Wire Line
-	4650 2700 5400 2700
-Wire Wire Line
-	4650 2600 5400 2600
-Wire Wire Line
-	4650 2500 5400 2500
-Wire Wire Line
-	4650 2400 5400 2400
-Wire Wire Line
-	4650 2300 5400 2300
-Wire Wire Line
-	4650 2200 5400 2200
-Wire Wire Line
-	4650 2100 5400 2100
-Wire Wire Line
-	4650 2000 5400 2000
-Wire Wire Line
-	4650 1900 5400 1900
-Wire Wire Line
-	4650 1800 5400 1800
-Wire Wire Line
-	4650 1700 5400 1700
-Text Label 5400 3100 2    50   ~ 0
-GPIO4(GCLK)
-Text Label 5400 3000 2    50   ~ 0
-GPIO14(TXD0)
-Text Label 5400 2900 2    50   ~ 0
-GPIO15(RXD0)
-Text Label 5400 2800 2    50   ~ 0
-GPIO17(GEN0)
-Text Label 5400 2700 2    50   ~ 0
-GPIO18(GEN1)(PWM0)
-Text Label 5400 2600 2    50   ~ 0
-GPIO27(GEN2)
-Text Label 5400 2500 2    50   ~ 0
-GPIO22(GEN3)
-Text Label 5400 2400 2    50   ~ 0
-GPIO23(GEN4)
-Text Label 5400 2300 2    50   ~ 0
-GPIO24(GEN5)
-Text Label 5400 2200 2    50   ~ 0
-GPIO25(GEN6)
-Text Label 5400 2100 2    50   ~ 0
-GPIO10(SPI0_MOSI)
-Text Label 5400 2000 2    50   ~ 0
-GPIO9(SPI0_MISO)
-Text Label 5400 1900 2    50   ~ 0
-GPIO11(SPI0_SCK)
-Text Label 5400 1800 2    50   ~ 0
-GPIO8(SPI0_CE_0)
-Text Label 5400 1700 2    50   ~ 0
+Text Label 4650 1900 0    50   ~ 0
 GPIO7(SPI0_CE_1)
-Text Label 4650 1200 0    50   ~ 0
-GPIO19(SPI1_MISO)
-Text Label 4650 1600 0    50   ~ 0
-GPIO5
-Text Label 4650 1500 0    50   ~ 0
-GPIO6
 Text Label 4650 1400 0    50   ~ 0
+GPIO19(SPI1_MISO)
+Text Label 4650 1800 0    50   ~ 0
+GPIO5
+Text Label 4650 1700 0    50   ~ 0
+GPIO6
+Text Label 4650 1600 0    50   ~ 0
 GPIO12(PWM0)
-Text Label 4650 1300 0    50   ~ 0
+Text Label 4650 1500 0    50   ~ 0
 GPIO13(PWM1)
 Text Label 4650 1100 0    50   ~ 0
 GPIO20(SPI1_MOSI)
@@ -504,8 +438,6 @@ Wire Wire Line
 Connection ~ 9800 5100
 NoConn ~ 2400 2400
 NoConn ~ 2900 2400
-NoConn ~ 2900 2800
-NoConn ~ 2400 2900
 Wire Wire Line
 	9800 4600 10050 4600
 Wire Wire Line
@@ -1209,4 +1141,36 @@ Wire Wire Line
 	1300 4400 1300 4100
 Wire Wire Line
 	1000 4700 1300 4700
+Text Label 4650 1300 0    50   ~ 0
+GPIO16
+Text Label 4650 1200 0    50   ~ 0
+GPIO26
+Text Label 4650 2000 0    50   ~ 0
+GPIO8(SPI0_CE_0)
+Text Label 4650 2100 0    50   ~ 0
+GPIO11(SPI0_SCK)
+Text Label 4650 2200 0    50   ~ 0
+GPIO9(SPI0_MISO)
+Text Label 4650 2300 0    50   ~ 0
+GPIO10(SPI0_MOSI)
+Text Label 4650 2400 0    50   ~ 0
+GPIO23(GEN4)
+Text Label 4650 2500 0    50   ~ 0
+GPIO22(GEN3)
+Text Label 4650 2600 0    50   ~ 0
+GPIO27(GEN2)
+Text Label 4650 2700 0    50   ~ 0
+GPIO18(GEN1)(PWM0)
+Text Label 4650 2800 0    50   ~ 0
+GPIO17(GEN0)
+Text Label 4650 2900 0    50   ~ 0
+GPIO15(RXD0)
+Text Label 4650 3000 0    50   ~ 0
+GPIO14(TXD0)
+Text Label 4650 3100 0    50   ~ 0
+GPIO4(GCLK)
+Text Label 4650 3200 0    50   ~ 0
+GPIO3(SCL1)
+Text Label 4650 3300 0    50   ~ 0
+GPIO2(SDA1)
 $EndSCHEMATC
