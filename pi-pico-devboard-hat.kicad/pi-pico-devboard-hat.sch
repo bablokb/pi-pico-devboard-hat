@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "pi-pico-devboard-hat"
-Date "2021-03-23"
-Rev "8"
+Date "2021-03-27"
+Rev "9"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pi-pico-devboard-hat"
 Comment2 ""
@@ -476,12 +476,12 @@ Connection ~ 5800 4600
 $Comp
 L power:+5V #PWR06
 U 1 1 6052A522
-P 9800 2800
-F 0 "#PWR06" H 9800 2650 50  0001 C CNN
-F 1 "+5V" H 9800 2940 50  0000 C CNN
-F 2 "" H 9800 2800 50  0000 C CNN
-F 3 "" H 9800 2800 50  0000 C CNN
-	1    9800 2800
+P 9800 2600
+F 0 "#PWR06" H 9800 2450 50  0001 C CNN
+F 1 "+5V" H 9800 2740 50  0000 C CNN
+F 2 "" H 9800 2600 50  0000 C CNN
+F 3 "" H 9800 2600 50  0000 C CNN
+	1    9800 2600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -495,18 +495,6 @@ F 3 "~" H 9800 2950 50  0001 C CNN
 	1    9800 2950
 	0    -1   -1   0   
 $EndComp
-$Comp
-L power:PWR_FLAG #FLG0101
-U 1 1 605568F4
-P 9800 2800
-F 0 "#FLG0101" H 9800 2875 50  0001 C CNN
-F 1 "PWR_FLAG" V 9800 2928 50  0000 L CNN
-F 2 "" H 9800 2800 50  0001 C CNN
-F 3 "~" H 9800 2800 50  0001 C CNN
-	1    9800 2800
-	0    1    1    0   
-$EndComp
-Connection ~ 9800 2800
 Wire Wire Line
 	7600 5650 9800 5650
 Wire Wire Line
@@ -1209,4 +1197,29 @@ Wire Notes Line
 	2750 4900 3800 4900
 Wire Notes Line
 	2750 3550 3800 3550
+$Comp
+L Connector:Conn_01x02_Male J10
+U 1 1 605FB177
+P 10000 2700
+F 0 "J10" H 9972 2582 50  0000 R CNN
+F 1 "Conn_Master_On" H 9972 2673 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10000 2700 50  0001 C CNN
+F 3 "~" H 10000 2700 50  0001 C CNN
+	1    10000 2700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9800 2700 9800 2800
+$Comp
+L power:PWR_FLAG #FLG0110
+U 1 1 60612B48
+P 3100 950
+F 0 "#FLG0110" H 3100 1025 50  0001 C CNN
+F 1 "PWR_FLAG" V 3100 1078 50  0000 L CNN
+F 2 "" H 3100 950 50  0001 C CNN
+F 3 "~" H 3100 950 50  0001 C CNN
+	1    3100 950 
+	0    1    1    0   
+$EndComp
+Connection ~ 3100 950 
 $EndSCHEMATC
