@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "pi-pico-devboard-hat"
 Date "2021-03-27"
-Rev "9"
+Rev "10"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pi-pico-devboard-hat"
 Comment2 ""
@@ -749,51 +749,25 @@ Wire Wire Line
 $Comp
 L Device:R R2
 U 1 1 6062584D
-P 1350 4550
-F 0 "R2" H 1280 4504 50  0000 R CNN
-F 1 "4K7" H 1280 4595 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 1280 4550 50  0001 C CNN
-F 3 "~" H 1350 4550 50  0001 C CNN
-	1    1350 4550
+P 1300 4550
+F 0 "R2" H 1230 4504 50  0000 R CNN
+F 1 "4K7" H 1230 4595 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 1230 4550 50  0001 C CNN
+F 3 "~" H 1300 4550 50  0001 C CNN
+	1    1300 4550
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R1
 U 1 1 60626297
 P 1000 4550
-F 0 "R1" H 930 4504 50  0000 R CNN
-F 1 "4K7" H 930 4595 50  0000 R CNN
+F 0 "R1" H 1150 4500 50  0000 R CNN
+F 1 "4K7" H 1200 4600 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 930 4550 50  0001 C CNN
 F 3 "~" H 1000 4550 50  0001 C CNN
 	1    1000 4550
 	-1   0    0    1   
 $EndComp
-$Comp
-L Connector:Conn_01x02_Male J3
-U 1 1 60626EA3
-P 1100 3900
-F 0 "J3" V 900 3800 50  0000 L CNN
-F 1 "SDA_UP" V 1000 3650 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1100 3900 50  0001 C CNN
-F 3 "~" H 1100 3900 50  0001 C CNN
-	1    1100 3900
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector:Conn_01x02_Male J4
-U 1 1 606291D7
-P 1450 3900
-F 0 "J4" V 1250 3800 50  0000 L CNN
-F 1 "SCL_UP" V 1350 3750 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1450 3900 50  0001 C CNN
-F 3 "~" H 1450 3900 50  0001 C CNN
-	1    1450 3900
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2100 4200 1450 4200
-Wire Wire Line
-	1450 4200 1450 4100
 Wire Wire Line
 	2100 4300 1100 4300
 Wire Wire Line
@@ -801,18 +775,9 @@ Wire Wire Line
 Wire Wire Line
 	1000 4100 1000 4400
 Wire Wire Line
-	1350 4100 1350 4400
-Wire Wire Line
 	2100 4400 1750 4400
 Wire Wire Line
 	1750 4400 1750 4700
-Wire Wire Line
-	1750 4700 1350 4700
-Wire Wire Line
-	1350 4650 1350 4700
-Wire Wire Line
-	1350 4700 1000 4700
-Connection ~ 1350 4700
 $Comp
 L Connector:Conn_01x06_Male J5
 U 1 1 605903A9
@@ -1222,4 +1187,26 @@ F 3 "~" H 3100 950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Connection ~ 3100 950 
+$Comp
+L Connector:Conn_01x04_Male J3
+U 1 1 606247ED
+P 1200 3900
+F 0 "J3" V 950 3800 50  0000 L CNN
+F 1 "Conn_PU" V 1100 3650 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1200 3900 50  0001 C CNN
+F 3 "~" H 1200 3900 50  0001 C CNN
+	1    1200 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1200 4200 1200 4100
+Wire Wire Line
+	1200 4200 2100 4200
+Connection ~ 1300 4700
+Wire Wire Line
+	1300 4700 1750 4700
+Wire Wire Line
+	1300 4400 1300 4100
+Wire Wire Line
+	1000 4700 1300 4700
 $EndSCHEMATC
