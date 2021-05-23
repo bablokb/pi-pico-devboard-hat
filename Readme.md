@@ -15,7 +15,7 @@ this is no major problem. Just watch out that you don't accidently fill
 the holes if you also want to attach headers directly to the Pico (which
 you most certainly want to do).
 
-![](pcb-3D.png "3D-view")
+![](pcb-3d.png "3D-view")
 
 
 Schematic
